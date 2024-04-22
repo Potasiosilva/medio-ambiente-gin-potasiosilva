@@ -18,7 +18,7 @@ var db *gorm.DB
 
 func main() {
 	var err error
-	dsn := "user=yourusername password=yourpassword dbname=yourdbname host=yourhost port=yourport sslmode=disable TimeZone=UTC"
+	dsn := "postgres://medio_ambiente_gin_db_user:rNldrBgj8ZXMWGp0uxLhNKiyVdXjE8d6@dpg-coiu2gol5elc73ddp07g-a.virginia-postgres.render.com/medio_ambiente_gin_db?sslmode=disable TimeZone=UTC"
 	db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("Failed to open database")
