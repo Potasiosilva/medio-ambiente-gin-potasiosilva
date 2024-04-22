@@ -1,0 +1,50 @@
+# Ignorar archivos temporales de Go
+*.tmp
+*.swp
+*.swo
+*.bak
+*.log
+*.pid
+*.lock
+
+# Ignorar archivos de configuración local
+.env
+.env.*
+
+# Ignorar archivos de configuración de entorno
+.env.local
+.env.development
+.env.production
+
+# Ignorar archivos de configuración de editores de texto
+.vscode/
+.idea/
+
+# Ignorar archivos de configuración de herramientas de construcción
+*.exe
+*.dll
+*.o
+*.obj
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.a
+*.lib
+
+# Ignorar archivos de configuración de bases de datos
+*.db
+*.sqlite
+
+# Ignorar archivos de configuración de dependencias
+go.mod
+go.sum
+
+# Ignorar directorios de compilación
+/bin/
+/obj/
+
+# Ignorar archivos de configuración de entornos de ejecución
+.DS_Store
+Thumbs.db

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+    background-color: #16cea0;
+    color: white;
+    font-size: 40px;
+}
+
+h2, h3 {
+    color: #333;
+}
+p {
+    margin-bottom: 20px;
+    text-align: start;
+    font-size: 24px;
+}
+/* Estilos para el formulario */
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form h2 {
+    margin-top: 0;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+button {
+    background-color: #16cea0;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #00b398;
+}
+
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.section h2, .section h3 {
+    margin-top: 0;
+}
+
+.error {
+    color: red;
+}
+
+.err {
+    background-color: rgb(227, 32, 32);
+}
+
+.err:hover {
+    background-color: rgb(194, 21, 21);
+}
+

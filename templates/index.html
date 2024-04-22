@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medio ambiente - reciclando</title>
+    <link rel="stylesheet" href="static/index-styles.css">
+<body>
+    <h1 class="title">Cuidemos al planeta - Reciclemos</h1>
+
+
+    <div class="section">
+        <h2>El Medio Ambiente y el Reciclaje</h2>
+        <p>El reciclaje es un proceso esencial para preservar nuestro planeta y asegurar un futuro saludable para las generaciones futuras. Al reciclar, reducimos la necesidad de extraer recursos naturales como madera, agua y minerales para nuevos productos, lo que a su vez ayuda a conservar estos recursos vitales para nuestro ecosistema</p>
+    </div>
+    
+    <div class="section">
+        <h2>Qué es el reciclaje?</h2>
+        <p>El reciclaje es el proceso de recolectar y procesar materiales que de otro modo serían descartados como basura, transformándolos en nuevos productos. Esto beneficia a nuestra comunidad, la economía y el medio ambiente. Los productos solo deben ser reciclados si no pueden ser reducidos o reutilizados</p>
+    </div>
+    
+    <div class="section">
+        <h2>¿Por qué reciclar?</h2>
+        <p>El reciclaje ofrece múltiples beneficios para nuestro medio ambiente. Por ejemplo, el reciclaje de 10 botellas de plástico ahorra suficiente energía para alimentar un laptop durante más de 25 horas. Además, el reciclaje ayuda a reducir el cambio climático, conservando la energía y reduciendo la contaminación y las emisiones</p>
+    </div>
+    
+    <div class="section">
+        <h2>Cómo ayudar al reciclaje</h2>
+        <p>Para ayudar a cerrar el ciclo de reciclaje, puedes comprar productos nuevos hechos de materiales reciclados. Hay miles de productos que contienen contenido reciclado, como latas de aluminio, bumpers de coche, tapetes, cajas de cereal, libros de cómic, cajas de huevos, contenedores de vidrio, detergentes de lavandería, aceite de motor, clavos, periódicos, toallas de papel, productos de acero y bolsas de basura</p>    
+    </div>
+    
+    <div class="section">
+        <h2>Donde reciclar</h2>
+        <p>Puedes reciclar en tu edificio, en tu parque o hazta en tu colegio! Pero tienes que tener en cuenta que debes poner los materiales correspondientes en los huecos de reciclaje correspendiente, por ejemplo, poner el vidrio en el hueco de el vidrio y así...</p>
+    </div>
+    
+    <div class="section">
+        <h2>Desafíos y Oportunidades</h2>
+        <p>A pesar de los beneficios claros del reciclaje, el sistema actual enfrenta muchos desafíos. 
+            Muchas personas están confundidas sobre qué artículos pueden ser reciclados, dónde pueden ser reciclados y cómo. 
+            Esto a menudo lleva a que los residuos reciclables terminen en la basura o que la basura termine en el contenedor de reciclaje.</p>
+        <p>Promover una cultura de reciclaje es esencial para el futuro de nuestro planeta. 
+            Al cambiar nuestro estilo de vida para ser más conscientes de nuestras elecciones y preservar los recursos que tenemos, 
+            podemos asegurar un planeta saludable para las generaciones futuras </p>
+    </div>
+    
+    <div class="section">
+        <form action="/submit" method="POST">
+            <h2>Inserta aqui tu idea para cuidar el reciclaje! (Al enviarla no la podras eliminar, así que piensa bien tu idea!)</h2>
+            <label for="user">Nombre de usuario</label>
+            <input type="text" name="user" id="user" required>
+            <label for="idea">Tu idea</label>
+            <input type="text" name="idea" id="idea" required>
+            <p class="error">{{.err}}</p>
+            <button>Enviar</button>
+        </form>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const errorMessage = document.querySelector('.error');
+        
+            form.addEventListener('submit', function(event) {
+                const userInput = document.getElementById('user').value.trim();
+                const ideaInput = document.getElementById('idea').value.trim();
+        
+                if (userInput === '' || ideaInput === '') {
+                    event.preventDefault(); // Evita que el formulario se envíe
+                    errorMessage.textContent = 'Por favor, completa todos los campos.';
+                } else {
+                    errorMessage.textContent = ''; // Limpia el mensaje de error si los campos están completos
+                }
+            });
+        });
+    </script>
+        
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas</title>
+    <link rel="stylesheet" href="static/idea-styles.css"> <!-- Asegúrate de vincular tu archivo CSS aquí -->
+</head>
+<body>
+    <h1>Ideas</h1>
+    <ul>
+        {{range .ideas}}
+            <li class="card">
+                <div class="user">{{.User}}</div>
+                <div class="idea">{{.Idea}}</div>
+            </li>
+        {{end}}
+    </ul>
+
+    <!-- Aquí puedes agregar scripts para manejar las acciones de editar y eliminar -->
+</body>
+</html>
