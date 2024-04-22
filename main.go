@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"gorm.io/driver/sqlite"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
@@ -18,7 +18,8 @@ var db *gorm.DB
 
 func main() {
 	var err error
-	db, err = gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+	dsn := "user=yourusername password=yourpassword dbname=yourdbname host=yourhost port=yourport sslmode=disable TimeZone=UTC"
+	db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("Failed to open database")
 	}
